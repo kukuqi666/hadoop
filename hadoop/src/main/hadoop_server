@@ -1,0 +1,93 @@
+#!/bin/bash
+
+# 调用API并打印结果
+echo "请欣赏文心一言，每次运行本文件输出的每句话都会更新哦，不信你可以试试"
+echo
+echo "==========================================================================================================================="
+echo
+curl -s https://api.vvhan.com/api/text/love
+echo
+echo
+curl -s https://api.vvhan.com/api/ian/rand
+echo
+echo
+curl -s https://api.vvhan.com/api/text/sexy
+echo
+echo
+curl -s https://api.vvhan.com/api/text/joke
+echo
+echo "==========================================================================================================================="
+echo  "您可以通过以下 URL 访问 Hadoop Web 界面："
+# 获取本地 IP 地址，假设机器有一个 eth0 网络接口
+ip_address=$(hostname -I | awk '{print $1}')  # 获取第一个 IP 地址
+# 用动态获取的IP替换localhost
+echo "NameNode Web UI: http://${ip_address}:9870/"
+echo "ResourceManager Web UI: http://${ip_address}:8088/"
+echo "您可以使用 'jps' 命令检查 Hadoop 进程状态："
+echo "==========================================================================================================================="
+# 定义 Hadoop 用户变量
+HADOOP_USER="hadoop"
+
+# 定义 Hadoop 脚本路径
+HADOOP_SBIN="$HADOOP_HOME/sbin"
+
+# 启动 Hadoop 服务的函数
+start_services() {
+    echo "正在启动 Hadoop DFS 和 YARN..."
+    if su - $HADOOP_USER -c "$HADOOP_SBIN/start-dfs.sh"; then
+        echo "Hadoop DFS 启动成功。"
+     else
+        echo "Hadoop DFS 启动失败。"
+        exit 1
+     fi
+
+     if su - $HADOOP_USER -c "$HADOOP_SBIN/start-yarn.sh"; then
+         echo "Hadoop YARN 启动成功。"
+     else
+         echo "Hadoop YARN 启动失败。"
+         exit 1
+     fi
+}
+
+# 关闭 Hadoop 服务的函数
+stop_services() {
+    echo "正在关闭 Hadoop DFS 和 YARN..."
+     if su - $HADOOP_USER -c "$HADOOP_SBIN/stop-dfs.sh"; then
+         echo "Hadoop DFS 关闭成功。"
+     else
+         echo "Hadoop DFS 关闭失败。"
+         exit 1
+     fi
+
+     if su - $HADOOP_USER -c "$HADOOP_SBIN/stop-yarn.sh"; then
+         echo "Hadoop YARN 关闭成功。"
+     else
+         echo "Hadoop YARN 关闭失败。"
+         exit 1
+     fi
+}
+
+# 显示菜单并获取用户选择
+while true; do
+     echo "请选择操作："
+     echo "1) 启动 Hadoop DFS 和 YARN"
+     echo "2) 关闭 Hadoop DFS 和 YARN"
+     echo "3) 退出"
+     read -p "输入选项 [1/2/3]: " choice
+
+     case $choice in
+          1)
+              start_services
+              ;;
+          2)
+              stop_services
+              ;;
+          3)
+              echo "退出程序。"
+              exit 0
+              ;;
+          *)
+              echo "无效选项，请输入 1、2 或 3。"
+              ;;
+     esac
+done
