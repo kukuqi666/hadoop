@@ -89,9 +89,9 @@ yum update
 
 
 ```
-wget -o /usr/local/bin https://raw.githubusercontent.com/kukuqi666/hadoop/main/hadoop/target/hadoop_install
+wget -o /usr/local/bin/hadoop_install https://raw.githubusercontent.com/kukuqi666/hadoop/main/hadoop/target/hadoop_install && chmod +x /usr/local/bin/hadoop_install && hadoop_install
 
-wget -o /usr/local/bin https://raw.githubusercontent.com/kukuqi666/hadoop/main/hadoop/target/hadoop_server
+wget -o /usr/local/bin/hadoop_server https://raw.githubusercontent.com/kukuqi666/hadoop/main/hadoop/target/hadoop_server && chmod +x /usr/local/bin/hadoop_server && hadoop_server
 
 ```
 
