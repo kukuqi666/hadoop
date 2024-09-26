@@ -141,8 +141,7 @@ wget https://github.com/kukuqi666/hadoop/releases/download/v1.0.0/hadoop_server 
 
 ### 参考视频
 
-![vidio](https://gitee.com/kukuqi666/images/raw/master/1008.mp4)
-
+[![Hadoop安装脚本适用于centos 7](https://gitee.com/kukuqi666/images/raw/master/1009.png)](https://www.bilibili.com/video/BV1nkxjezEsy/)
 
 
 
