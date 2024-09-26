@@ -123,7 +123,7 @@ wget https://github.com/kukuqi666/hadoop/releases/download/v1.0.0/hadoop_server 
 
 ![image](https://gitee.com/kukuqi666/images/raw/master/1003.png)
 
-## 安装完成界面 可以通过上面的IP访问web页面
+### 安装完成界面 可以通过上面的IP访问web页面
 
 ![image](https://gitee.com/kukuqi666/images/raw/master/1004.png)
 
