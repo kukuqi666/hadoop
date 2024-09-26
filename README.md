@@ -95,40 +95,53 @@ wget -o /usr/local/bin/hadoop_install https://raw.githubusercontent.com/kukuqi66
 wget -o /usr/local/bin/hadoop_server https://raw.githubusercontent.com/kukuqi666/hadoop/main/hadoop/target/hadoop_server && chmod +x /usr/local/bin/hadoop_server
 ```
 
+### 如果不能用尝试从releases下载
+
+```
+wget https://github.com/kukuqi666/hadoop/releases/download/v1.0.0/hadoop_install && chmod +x hadoop_install && ./hadoop_install
+```
+
+```
+wget https://github.com/kukuqi666/hadoop/releases/download/v1.0.0/hadoop_server && chmod +x hadoop_server
+```
+
+```
+./hadoop_server
+```
 
 ## 安装脚本的相关说明
 
 ### 这是刚进入hadoop_install的安装页面 回车或空格进行运行脚本
 
-![image](https://gitee.com/kukuqi666/images/raw/master/1001.jpg)
+![image](https://gitee.com/kukuqi666/images/raw/master/1001.png)
 
 ### 这里看个人情况选择 我是用的3.3.6版本
 
-![image](https://gitee.com/kukuqi666/images/raw/master/1002.jpg)
+![image](https://gitee.com/kukuqi666/images/raw/master/1002.png)
 
 ### ssh配置免密登录选择 y 即可
 
-![image](https://gitee.com/kukuqi666/images/raw/master/1003.jpg)
+![image](https://gitee.com/kukuqi666/images/raw/master/1003.png)
 
 ## 安装完成界面 可以通过上面的IP访问web页面
 
-![image](https://gitee.com/kukuqi666/images/raw/master/1004.jpg)
+![image](https://gitee.com/kukuqi666/images/raw/master/1004.png)
 
 ### 输入**jps**查看hadoop运行状态 也可以通过**netstat -tunlp**来查看端口和进程
 
-![image](https://gitee.com/kukuqi666/images/raw/master/1005.jpg)
+![image](https://gitee.com/kukuqi666/images/raw/master/1005.png)
 
 ### 后面的开启和关闭hadoop使用hadoop_server即可 hadoop_install用不到了
 
-![image](https://gitee.com/kukuqi666/images/raw/master/1006.jpg)
+![image](https://gitee.com/kukuqi666/images/raw/master/1006.png)
 
 ### 上面图片已经关闭hadoop服务了 现在输入**jps**和**netstat -tunlp**就不显示进程了
 
-![image](https://gitee.com/kukuqi666/images/raw/master/1007.jpg)
+![image](https://gitee.com/kukuqi666/images/raw/master/1007.png)
 
 ### 参考视频
 
-![vidio](https://gitee.com/kukuqi666/images/raw/master/1008.jpg)
+![vidio](https://gitee.com/kukuqi666/images/raw/master/1008.mp4)
 
 
 
