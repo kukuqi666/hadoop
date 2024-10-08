@@ -86,13 +86,13 @@ sudo vim /etc/hosts
 ## Hadoop一键安装脚本 安装完以后就可以不用这个脚本了
 
 ```
-wget -o /usr/local/bin/hadoop_install https://raw.githubusercontent.com/kukuqi666/hadoop/main/hadoop/target/hadoop_install && chmod +x /usr/local/bin/hadoop_install && hadoop_install
+wget -P /usr/local/bin/ https://raw.githubusercontent.com/kukuqi666/hadoop/main/hadoop/target/hadoop_install && chmod +x /usr/local/bin/hadoop_install && hadoop_install
 ```
 
 ## Hadoop启动和停止脚本 等安装完Hadoop以后就可以使用这个脚本进行启动和关闭了
 
 ```
-wget -o /usr/local/bin/hadoop_server https://raw.githubusercontent.com/kukuqi666/hadoop/main/hadoop/target/hadoop_server && chmod +x /usr/local/bin/hadoop_server
+wget -O /usr/local/bin/hadoop_server https://raw.githubusercontent.com/kukuqi666/hadoop/main/hadoop/target/hadoop_server && chmod +x /usr/local/bin/hadoop_server
 ```
 
 ### 如果不能用尝试从releases下载
