@@ -29,7 +29,7 @@ echo "==========================================================================
 HADOOP_USER="hadoop"
 
 # 定义 Hadoop 脚本路径
-HADOOP_SBIN="$HADOOP_HOME/sbin"
+HADOOP_SBIN="/usr/local/hadoop/sbin"
 
 # 启动 Hadoop 服务的函数
 start_services() {
