@@ -94,6 +94,11 @@ wget -P /usr/local/bin/ https://raw.githubusercontent.com/kukuqi666/hadoop/main/
 ```
 wget -O /usr/local/bin/hadoop_server https://raw.githubusercontent.com/kukuqi666/hadoop/main/hadoop/src/main/hadoop_server && chmod +x /usr/local/bin/hadoop_server
 ```
+## 启动h方式 直接在终端键入以下命令就可以了
+
+```
+hadoop_server
+```
 
 ### 如果不能用尝试从releases下载
 
